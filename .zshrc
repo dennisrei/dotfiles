@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="amuse"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -69,8 +69,13 @@ ZSH_THEME="robbyrussell"
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
+
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git 
+	zsh-autosuggestions 
+	sudo
+	zsh-256color)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,5 +105,22 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# dotfiles alias
+### alias
+# dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# alias for pushing commits and opening pull requests
+alias gitpp='az repos pr create --delete-source-branch true --repository $(basename `g rev-parse --show-toplevel`) --source-branch $(git branch --show-current) --reviewers "pepijn@ndwcloud.nu" "job.almekinders@ndwcloud.nu" --title "$(git show --pretty=format:"%B" --no-patch)" --description "$(git show --pretty=format:"%B" --no-patch)"'
+
+# Pip requires virtualenv
+export PIP_REQUIRE_VIRTUALENV=false
+
+
+# Add pyenv executable to PATH and
+# enable shims by adding the following
+# to ~/.profile:
+
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
+# eval "$(pyenv virtualenv-init -)"
