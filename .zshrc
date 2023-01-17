@@ -110,7 +110,7 @@ source $ZSH/oh-my-zsh.sh
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # alias for pushing commits and opening pull requests
-alias gitpp='az repos pr create --delete-source-branch true --repository $(basename `g rev-parse --show-toplevel`) --source-branch $(git branch --show-current) --reviewers "pepijn@ndwcloud.nu" "job.almekinders@ndwcloud.nu" --title "$(git show --pretty=format:"%B" --no-patch)" --description "$(git show --pretty=format:"%B" --no-patch)"'
+alias gitpr='az repos pr create --delete-source-branch true --repository $(basename `g rev-parse --show-toplevel`) --source-branch $(git branch --show-current) --reviewers "kalyo500@cura.kpn.org" "leide505@cura.kpn.org" --title "$(git show --pretty=format:"%B" --no-patch)" --description "$(git show --pretty=format:"%B" --no-patch)"'
 
 # Pip requires virtualenv
 export PIP_REQUIRE_VIRTUALENV=false
