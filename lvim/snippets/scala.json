@@ -1,0 +1,7 @@
+{
+  "for": {
+    "prefix": "for comprehension",
+    "body": ["for", "  _ <- $1", "yield ()"],
+    "description": "For Comprehension"
+  }
+}
