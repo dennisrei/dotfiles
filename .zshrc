@@ -109,12 +109,8 @@ source $ZSH/oh-my-zsh.sh
 # dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-# alias for pushing commits and opening pull requests
-alias gitpr='az repos pr create --delete-source-branch true --repository $(basename `g rev-parse --show-toplevel`) --source-branch $(git branch --show-current) --reviewers "kalyo500@cura.kpn.org" "leide505@cura.kpn.org" --title "$(git show --pretty=format:"%B" --no-patch)" --description "$(git show --pretty=format:"%B" --no-patch)"'
-
 # Pip requires virtualenv
 export PIP_REQUIRE_VIRTUALENV=false
-
 
 # Add pyenv executable to PATH and
 # enable shims by adding the following
