@@ -1,0 +1,31 @@
+# directory navigation
+window-inherit-working-directory = false
+tab-inherit-working-directory = false
+
+# aesthetics
+theme = Builtin Dark
+background-opacity = 0.90
+background-blur=40
+background=#000000
+mouse-hide-while-typing = true
+font-family = "JetBrainsMono Nerd Font"
+
+# typography
+font-size=13
+font-thicken=true
+font-thicken-strength=1
+adjust-cell-height=1
+
+# auto update settings
+auto-update = download
+auto-update-channel = stable
+
+# switch tabs with cmd + left/right
+keybind = super+left=previous_tab
+keybind = super+right=next_tab
+keybind = super+r=reload_config
+keybind = super+|=new_split:right
+keybind = super+\=new_split:left
+keybind = super+b>f=toggle_fullscreen
+
+

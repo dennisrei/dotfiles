@@ -1,0 +1,3 @@
+[[keys]]
+on = "enter"
+run = "cd $YAZI_ENTRY && nvim ."
